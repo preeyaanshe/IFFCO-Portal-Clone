@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Profile</h1>
+    <p>Name: {{ user['name'] }}</p>
+    <p>Salary: ${{ user['salary'] }}</p>
+    <p>Tenure: {{ user['tenure'] }} years</p>
+    <p>Leaves: {{ user['leaves'] }} days</p>
+    <p>Sick Leaves: {{ user['sick_leaves'] }} days</p>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
